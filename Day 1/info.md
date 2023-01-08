@@ -1,5 +1,6 @@
 # Problem
 ## <a href="https://github.com/sohrabhamza/Days-of-code-JS/tree/main/Day%201">Code</a>
+## <a href="https://twitter.com/SohrabHamza1/status/1612150906606456832">Post</a>
 
 First day of code. Simple js form validation for name and age
 
