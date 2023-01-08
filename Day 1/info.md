@@ -25,3 +25,5 @@ Try both name and age empty
 Could have better formatting for multiple imputs
 
 Using regex, proper name validation can be done. (No numbers, special characters etc)
+
+# <a href="https://github.com/sohrabhamza/Days-of-code-JS/tree/main/Day%201">Code</a>
