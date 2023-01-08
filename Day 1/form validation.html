@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+</head>
+
+<script>
+    function validate() {
+        var name = document.f1.name.value;
+        var age = document.f1.age.value;
+        console.log(name);
+        if (name != "" && age > 17 && age < 26) {
+            alert("Valid Form");
+        }
+        else {
+            var myAlert = ""
+            if (name == "") { myAlert += "Name is empty " }
+            if (age < 17 || age > 26) { myAlert += "Invalid Age" }
+            alert(myAlert);
+        }
+    }
+</script>
+
+<body>
+
+    <form name="f1" action=" " onsubmit="validate()">
+        <label for="name">Name:</label>
+        <input type="text" id="name"><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
