@@ -1,6 +1,7 @@
 # Day 2 09-01-23
 
 # Problem
+## <a href="https://github.com/sohrabhamza/Days-of-code-JS/tree/main/Day%202">Code</a> & <a href="https://www.linkedin.com/posts/sohrab-hamza-ab13151a5_imgur-the-magic-of-the-internet-activity-7018253641320964096-GivR?utm_source=share&utm_medium=member_desktop">Post</a>
 
 Improving upon yesterdays work with regex, multiple pages and external stylesheets. 
 
@@ -16,7 +17,7 @@ Roll number should be of format 19, 20 or 21 + B + G/E/Y + any 5 numbers. Regex:
 
 `/(19|2[0-3])BC[GEY]\d{5}/`
 
-
+<img src="https://i.imgur.com/m1se6uK.png" width="500">
 
 # Higlighted Code
 
@@ -89,6 +90,7 @@ function formValidate() {
 Auto removal of special characters in the name field. 
 
 Minimum name size requirements
+
 
 
 
