@@ -1,4 +1,5 @@
 # Problem
+## <a href="https://github.com/sohrabhamza/Days-of-code-JS/tree/main/Day%201">Code</a> & <a href="https://www.linkedin.com/posts/sohrab-hamza-ab13151a5_vitbhopalgaming-daysofcode-day1-activity-7018246918367535104-FUgT?utm_source=share&utm_medium=member_desktop">Post</a>
 
 First day of code. Simple js form validation for name and age
 
@@ -25,3 +26,5 @@ Try both name and age empty
 Could have better formatting for multiple imputs
 
 Using regex, proper name validation can be done. (No numbers, special characters etc)
+
+
