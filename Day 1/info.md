@@ -1,6 +1,5 @@
 # Problem
-## <a href="https://github.com/sohrabhamza/Days-of-code-JS/tree/main/Day%201">Code</a>
-## <a href="https://twitter.com/SohrabHamza1/status/1612150906606456832">Post</a>
+## <a href="https://github.com/sohrabhamza/Days-of-code-JS/tree/main/Day%201">Code</a> & <a href="https://www.linkedin.com/posts/sohrab-hamza-ab13151a5_vitbhopalgaming-daysofcode-day1-activity-7018246918367535104-FUgT?utm_source=share&utm_medium=member_desktop">Post</a>
 
 First day of code. Simple js form validation for name and age
 
