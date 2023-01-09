@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>VIT Chess Club</title>
+</head>
+
+<body>
+    <header class="header" id="myHeader">
+        <p class="myHead_Normal">Welcome to the <b class="myHead_Bold">VIT Chess Club</b></p>
+    </header>
+
+    <script>
+        function formValidate() {
+            let rollV = false, enthuV = false, nameV = false; //Variables for checks
+            let roll = document.forms["memberForm"]["froll"].value; //Get rollnumber
+            let name = document.forms["memberForm"]["fname"].value; //Get name
+            let rollgex = /(19|2[0-3])BC[GEY]\d{5}/     //Regex for roll number
+
+            let alertNew = "";      //Declare string for alerts
+
+            //Checks for each field. If passed then set that check's bool to true, else concat an error message
+            if (name.match(/[^a-zA-Z ]+/) != null) {
+                alertNew += "Your name cannot contain anything except letters \n";
+            }
+            else {
+                nameV = true;
+            }
+
+            if (roll.match(rollgex) == null || roll == "") {
+                alertNew += roll == "" ? "Roll number empty \n" : "Invalid Roll Number \n";
+            }
+            else {
+                rollV = true;
+            }
+
+            if (document.getElementById('fenthu').checked == false) {
+                alertNew += "Please be enthusiastic \n";
+            }
+            else {
+                enthuV = true;
+            }
+
+            //If there are alerts, alert
+            if (alertNew != "") { alert(alertNew); }
+
+            //If all checks passed, thank user
+            if (rollV && enthuV && nameV) { window.location.href = "index.html"; alert("Thank you for registering"); }
+            else { return true }
+        }
+    </script>
+
+    <form class="content" name="memberForm" onsubmit="return formValidate()">
+        <label for="fname" class="fLabel">Name</label><br>
+        <input type="text" id="fname" name="fname" required><br><br>
+        <label for="froll" class="fLabel">Roll Number</label><br>
+        <input type="text" id="froll" name="froll" required><br><br>
+        <label for="fenthu" class="fLabel">Are you enthusiastic?</label>
+        <input type="checkbox" id="fenthu" name="fenthu"><br><br>
+        <button>Submit</button>
+    </form>
+
+    <button>
+        <a href="index.html">Back
+        </a>
+    </button>
+</body>
+
+</html>

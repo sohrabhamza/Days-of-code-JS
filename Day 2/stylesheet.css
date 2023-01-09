@@ -1,0 +1,50 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.body-title {
+    font-size: large;
+    color: rgb(242, 143, 59);
+}
+
+.body-content {
+    padding: 10px;
+}
+
+.header {
+    padding: 10px 16px;
+    background: rgb(255, 213, 194);
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.myHead_Normal {
+    font-size: xx-large;
+}
+
+.myHead_Bold {
+    color: rgb(242, 143, 59);
+}
+
+.content {
+    padding: 16px;
+}
+
+/* unvisited link */
+a:link {
+    color: rgb(88, 139, 139);
+}
+
+/* visited link */
+a:visited {
+    color: rgb(88, 139, 139);
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+}
