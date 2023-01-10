@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="Background">
+    <script>
+        function componentToHex(c) {
+            var hex = c.toString(16);
+            return hex.length == 1 ? "0" + hex : hex;
+        }
+
+        function rgbToHex(r, g, b) {
+            return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+        }
+
+        function changeBack() {
+            var r = document.forms["convForm"]["rC"].value;
+            var g = document.forms["convForm"]["gC"].value;
+            var b = document.forms["convForm"]["bC"].value;
+            let hex = rgbToHex(parseInt(r), parseInt(g), parseInt(b));
+            document.getElementById("Background").style.background = hex;
+            document.getElementById("text").textContent = hex;
+            return false;
+        }
+
+    </script>
+
+    <form onsubmit="return changeBack()" name="convForm">
+        R: <input id="rC" type="text" size="2"><br>
+        G: <input id="gC" type="text" size="2"><br>
+        B: <input id="bC" type="text" size="2"><br>
+        <button>Convert</button>
+    </form>
+
+    <h2 id="text"></h2>
+
+</body>
+
+</html>
