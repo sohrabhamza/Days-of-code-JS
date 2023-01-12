@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Match</title>
+    <style>
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        form {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Pattern Matching</h1>
+    <form name="Match" onsubmit="return stringMatch()">
+        <label>Enter String</label>
+        <input type="text" name="string" width="1000"> <br>
+        <label>Enter Pattern</label>
+        <input type="text" name="pattern">
+        <button>Match</button>
+    </form>
+    <h1 id="Success"></h1>
+    <script>
+        function stringMatch() {
+            var string = document.forms["Match"]["string"].value;
+            var pattern = document.forms["Match"]["pattern"].value;
+            if (string.match(pattern)) {
+                document.getElementById("Success").innerHTML = "Found at " + string.search(pattern);
+            }
+            else {
+                document.getElementById("Success").innerHTML = "Not found";
+            }
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>
