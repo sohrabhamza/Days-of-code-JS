@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+</head>
+
+<body>
+    <img id="hangIm" src="Img/1.png" height="200" />
+    <h1 id="HangText"></h1>
+    <h3 id="Win"></h3>
+
+    <script>
+        String.prototype.replaceAt = function (index, replacement) {
+            return this.substring(0, index) + replacement + this.substring(index + replacement.length);
+        }
+
+        let hangVars = [
+            "HUMMUS", "COLLEGE", "RICE"
+        ]
+        let currentIndex = Math.floor(Math.random() * hangVars.length);
+        let hangIms = [1, 2, 3, 4, 5, 6, 7];
+        let currentIm = 0;
+
+        var textToShow = "";
+        for (let i = 0; i < hangVars[currentIndex].length; i++) {
+            textToShow += "_ ";
+        }
+        document.getElementById("HangText").textContent = textToShow;
+
+        function HangValidate() {
+            let enteredVal = document.forms["Hang"]["tIn"].value;
+
+            HangCheck(enteredVal);
+
+            return false;
+        }
+
+        function HangCheck(x) {
+            //If all hangman parts have been drawn, you lose. 
+            if (currentIm === hangIms.length - 1) {
+                document.getElementById("Win").textContent = "You Lose";
+                return;
+            }
+
+            //Check if the displayed text is changed.
+            let changed = false;
+
+            //Check if inputted letter is present in parent letter and change the text on screen
+            for (let i = 0; i < hangVars[currentIndex].length; i++) {
+                if (hangVars[currentIndex].charAt(i) === x) {
+                    textToShow = textToShow.replaceAt(i * 2, x + " ");
+                    changed = true;
+                    alert(textToShow);
+                }
+            }
+            document.getElementById("HangText").textContent = textToShow;
+            document.forms["Hang"]["tIn"].value = "";
+
+            //If not changed, hang the man
+            if (!changed) {
+                currentIm += 1;
+                document.getElementById("hangIm").src = "Img/" + (currentIm + 1) + ".png";
+            }
+
+            //If all blanks are filled, you win
+            for (let i = 0; i < textToShow.length; i++) {
+                if (textToShow.charAt(i) === "_") {
+                    return;
+                }
+            }
+            document.getElementById("Win").textContent = "You Win";
+        }
+    </script>
+
+    <form name="Hang" onsubmit="return HangValidate()">
+        <input name="tIn" type="text" required>
+        <button>Try</button>
+    </form>
+</body>
+
+</html>
