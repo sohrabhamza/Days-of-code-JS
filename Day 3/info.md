@@ -1,6 +1,7 @@
 # Day 3 10-01-23
 
 # Problem
+## <a href="https://github.com/sohrabhamza/Days-of-code-JS/tree/main/Day%203">Code</a> & <a href="https://www.linkedin.com/posts/sohrab-hamza-ab13151a5_vitbhopalgaming-daysofcode-day3-activity-7018641626986115073-m9mP?utm_source=share&utm_medium=member_desktop">Post</a>
 
 Creating a simple rgb to hex converter page which then displays the color as the background of the page. 
 
