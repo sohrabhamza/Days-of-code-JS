@@ -1,6 +1,7 @@
 # Day 3 10-01-23
 
 # Problem
+## <a href="https://github.com/sohrabhamza/Days-of-code-JS/tree/main/Day%204">Code</a> & <a href="https://www.linkedin.com/posts/sohrab-hamza-ab13151a5_vitbhopalgaming-daysofcode-day4-activity-7019156166026932224-Vi6f?utm_source=share&utm_medium=member_desktop">Post</a>
 
 Create a simple hangman game. The program will show the amount of letters in the word. User can enter one letter at a time. If It is the correct letter, all blanks ("\_") corresponding to that letter will be filled in. If not then a new body part of the hangman will be drawn. If all letters are guessed before the man is hanged, then you win. Else you lose. 
 
