@@ -1,9 +1,10 @@
 # Days-of-code-JS
 
-| Days                                                                                                                                |
-|:-----------------------------------------------------------------------------------------------------------------------------------:|
-| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%201/info.md"> Day 1 (8-1-2023): Simple form validation </a>   |
-| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%202/info.md"> Day 2 (9-1-2023): Advanced form validation </a> |
-| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%203/info.md"> Day 3 (10-1-2023): RGB to hex converter </a>    |
-| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%204/info.md"> Day 4 (11-1-2023): Hangman Game </a>            |
-| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%205/info.md"> Day 5 (12-1-2023) Simple Pattern Matching </a>  |
+| Days                                                                                                                                     |
+|:----------------------------------------------------------------------------------------------------------------------------------------:|
+| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%201/info.md"> Day 1 (8-1-2023): Simple form validation </a>        |
+| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%202/info.md"> Day 2 (9-1-2023): Advanced form validation </a>      |
+| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%203/info.md"> Day 3 (10-1-2023): RGB to hex converter </a>         |
+| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%204/info.md"> Day 4 (11-1-2023): Hangman Game </a>                 |
+| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%205/info.md"> Day 5 (12-1-2023) Simple Pattern Matching </a>       |
+| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%206/info.md"> Day 6 (13-1-2023) Projectile Distance Calculator</a> |
