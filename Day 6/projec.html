@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, #44CCFF, #7494EA)
+        }
+
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #494947;
+        }
+
+        form {
+            font-size: 50px;
+        }
+
+        input {
+            background-color: #35FF69;
+            width: 50px;
+            border-radius: 16px;
+        }
+
+        button {
+            background-color: #D138BF;
+            border-radius: 16px;
+            color: #f1f1f1
+        }
+    </style>
+</head>
+
+<body>
+    <form name="proj" onsubmit="return ShowDistance()">
+        <label>Enter Initial Velocity</label><br>
+        <input type="text" name="vel"><br>
+        <label>Enter Angle</label><br>
+        <input type="text" name="ang"><br>
+        <button>Calculate</button>
+    </form>
+    <h1 id="Display"></h1>
+
+    <script>
+        function ShowDistance() {
+            var u = document.forms["proj"]["vel"].value;
+            var angl = document.forms["proj"]["ang"].value;
+            let g = 9.8;
+
+            var dist;
+
+            dist = (u * u * Math.sin(2 * angl)) / g;
+            document.getElementById("Display").innerHTML = "The distance this projectile will travel is " + dist;
+            return false;
+        }
+    </script>
+</body>
+
+</html>
