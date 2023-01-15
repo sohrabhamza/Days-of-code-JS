@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Names</title>
+    <style>
+        h1 {
+            font-weight: 900;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #212121;
+            border-style: solid;
+            border-radius: 16px;
+            border-width: 4px;
+            padding: 10px;
+        }
+
+        .Names {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 90vh;
+        }
+
+        body {
+            background-image: radial-gradient(pink, #d3d3d3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Names">
+        <h1 id="Nam">RAJU</h1>
+    </div>
+    <script>
+        var names = ["Sohrab", "Mahesh", "Raju", "Aakash", "Dilip", "Rohan", "Mohan"]
+        document.getElementById("Nam").textContent = names[Math.floor(Math.random() * names.length)];
+    </script>
+</body>
+
+</html>
