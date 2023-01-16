@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        .Cal {
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #545F66;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 4px solid;
+        }
+
+        th {
+            color: #B1CC74;
+            border-color: #545F66;
+        }
+
+        td {
+            border-color: #829399;
+        }
+
+        body {
+            background-image: radial-gradient(#ffff, #D0F4EA);
+        }
+
+        .innerCal {
+            border-style: dashed;
+            padding: 25px;
+            border-radius: 16px;
+            border-width: 4px;
+            border-color: #545F66;
+        }
+
+        .todayDate {
+            color: #B1CC74;
+            border-color: #B1CC74;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Cal">
+        <div class="innerCal">
+            <h3 style="padding: 5px; color: #B1CC74;" id="monthAndYear"></h3>
+            <table class="calTable" id="calendar">
+                <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+
+                <tbody id="calendar-body">
+
+                </tbody>
+            </table>
+
+            <div style="padding-top: 25px;">
+                <button id="previous" onclick="previous()">Previous</button>
+
+                <button id="next" onclick="next()">Next</button>
+            </div>
+            <br />
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
