@@ -2,7 +2,7 @@
 
 # Problem
 
-## [Code](https://github.com/sohrabhamza/Days-of-code-JS/tree/main/Day%210) & [Post](https://www.linkedin.com/posts/sohrab-hamza-ab13151a5_vitbhopalgaming-daysofcode-day9-activity-7020796183484805121-jth9?utm_source=share&utm_medium=member_desktop)
+## [Code](https://github.com/sohrabhamza/Days-of-code-JS/tree/main/Day%2010) & [Post](https://www.linkedin.com/posts/sohrab-hamza-ab13151a5_vitbhopalgaming-daysofcode-day9-activity-7021181184688689152-ZOwI?utm_source=share&utm_medium=member_desktop)
 
 Info about chichen itza with multiple connected pages and an external stylesheet. 
 
