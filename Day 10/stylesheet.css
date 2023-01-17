@@ -1,0 +1,43 @@
+header {
+    border: 3px dashed rgb(82, 82, 82);
+    border-radius: 16px;
+    color: #8FB339;
+}
+
+.center {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+h2 {
+    color: #8FB339;
+}
+
+p {
+    font-size: large;
+}
+
+img {
+    border: 3px solid #B7CE63;
+    height: 200;
+}
+
+rightAlign {
+    margin: auto;
+    text-align: right;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #4B5842;
+}
+
+body {
+    background-image: radial-gradient(#DADDD8, #C7D59F);
+}
