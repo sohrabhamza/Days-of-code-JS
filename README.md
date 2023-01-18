@@ -12,3 +12,4 @@
 | <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%208/info.md"> Day 8 (15-1-2023) Random Name Generator</a>                           |
 | <a style="color:#3BB273" href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%209/info.md"> Day 9 (16-1-2023) Calendar</a>                  |
 | <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%2010/info.md"> Day 10 (17-1-2023) Tourist Site Info</a>                             |
+| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%2011/info.md"> Day 11 (18-1-2023) Tourist Site Info</a>                             |
