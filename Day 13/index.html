@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            font-size: 25;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: normal;
+        }
+
+        .Holder {
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        .Inner {
+            padding: 30px;
+            border-style: dashed;
+            border-radius: 16px;
+        }
+
+        .game {
+            display: inline-block;
+        }
+
+        #one {
+            color: #E53D00;
+        }
+
+        #two {
+            color: #FFE900;
+        }
+
+        #op {
+            color: #046865;
+        }
+
+        input {
+            font-size: 25px;
+            border: none;
+            border-radius: 10px;
+            padding: 10;
+            background-color: #2F4858;
+            color: white;
+        }
+
+        input::placeholder {
+            color: white;
+            padding: 10;
+        }
+
+        body {
+            background-color: #86BBD8
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Holder">
+        <div class="Inner">
+            <h1 class="game" id="one">10</h1>
+            <h1 class="game" id="op">+</h1>
+            <h1 class="game" id="two">3</h1>
+            <h1 class="game">=</h1>
+            <input id="enter" class="game" type="text" size="10" placeholder="Enter Answer">
+        </div>
+    </div>
+
+    <script>
+        var cAns;
+        ChangeText();
+
+        document.getElementById('enter').onkeypress = function (e) {
+            if (!e) e = window.event;
+            var keyCode = e.code || e.key;
+            if (keyCode == 'Enter') {
+                if (document.getElementById('enter').value == cAns) {
+                    alert("Correct");
+                }
+                else {
+                    alert("Wrong, This is like literally basic maths lmao noob");
+                }
+                location.reload();
+            }
+        }
+
+        function ChangeText() {
+            let a, b, op;
+            a = Math.round(Math.random() * 10);
+            b = Math.round(Math.random() * 10);
+
+            op = Math.round(Math.random() * 3);
+            if (op === 0) {
+                document.getElementById('op').textContent = "+";
+                cAns = a + b;
+            }
+            if (op === 1) {
+                document.getElementById('op').textContent = "-";
+                cAns = a - b;
+            }
+            if (op === 2) {
+                document.getElementById('op').textContent = "*";
+                cAns = a * b;
+            }
+            if (op === 1) {
+                document.getElementById('op').textContent = "/";
+                cAns = a / b;
+            }
+            console.log(cAns);
+            document.getElementById('one').textContent = a;
+            document.getElementById('two').textContent = b;
+        }
+    </script>
+</body>
+
+</html>
