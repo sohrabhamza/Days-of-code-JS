@@ -14,4 +14,5 @@
 | <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%2010/info.md"> Day 10 (17-1-2023) Tourist Site Info</a>                             |
 | <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%2011/info.md"> Day 11 (18-1-2023) Dynamic Image Gallery</a>                         |
 | <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%2012/info.md"> Day 12 (19-1-2023) Weather Map</a>                                   |
-| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%2013/info.md"> Day 13 (20-1-2023) Weather Map</a>                                   |
+| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%2013/info.md"> Day 13 (20-1-2023) Math Game</a>                                     |
+| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%2014/info.md"> Day 14 (21-1-2023) Animated Gradient Body</a>                        |
