@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Keypress Sound Effect</title>
+    <script>
+        var length = 0;
+        var audios = ["Audio/click.mp3", "Audio/click2.mp3", "Audio/click3.mp3"]
+        function playSound() {
+            if (document.getElementById("inputField").value == length) return;
+            length = document.getElementById("inputField").value;
+
+            var key = new Audio();
+            console.log(Math.floor(Math.random() * audios.length));
+            key.src = audios[Math.floor(Math.random() * audios.length)];
+            key.play();
+        }
+    </script>
+
+    <style>
+        .Holder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            margin: 0 auto;
+            align-items: center;
+
+            border-style: dashed;
+            padding: 25px;
+            border-radius: 16px;
+        }
+
+        input,
+        input[type="text"]:focus {
+            width: 95vh;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            background-color: #C7D3BF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Holder">
+        <input type="text" id="inputField" onkeydown="playSound()">
+    </div>
+</body>
+
+</html>
