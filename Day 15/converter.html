@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>Distance Converter</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .Holder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            margin: 0 auto;
+
+            border-style: dashed;
+            padding: 25px;
+            border-radius: 16px;
+        }
+
+        input,
+        select,
+        button {
+            background-color: rgba(240, 240, 240, 0.75);
+            border: 0px;
+            size: 10px;
+        }
+
+
+        body {
+            background-color: pink;
+        }
+
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Holder">
+        <h1>Distance Converter</h1>
+        <form>
+            <label for="distance">Enter distance:</label>
+            <input type="text" id="distance" name="distance">
+            <br>
+            <label for="unit">Select unit:</label>
+            <select id="unit" name="unit">
+                <option value="miles">Miles</option>
+                <option value="kilometers">Kilometers</option>
+            </select>
+            <br>
+            <button type="button" onclick="convert()">Convert</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function convert() {
+            // Get the distance and unit values
+            var distance = document.getElementById("distance").value;
+            var unit = document.getElementById("unit").value;
+
+            // Convert the distance
+            if (unit === "miles") {
+                var kilometers = distance * 1.60934;
+                document.getElementById("result").textContent = distance + " miles is equal to " + kilometers + " kilometers.";
+            } else {
+                var miles = distance / 1.60934;
+                document.getElementById("result").textContent = distance + " kilometers is equal to " + miles + " miles.";
+            }
+        }
+    </script>
+</body>
+
+</html>
