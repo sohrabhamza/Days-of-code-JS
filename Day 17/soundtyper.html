@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Keypress Sound Effect</title>
+    <script>
+
+    </script>
+
+    <style>
+        .Holder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            margin: 0 auto;
+            align-items: center;
+
+            border-style: dashed;
+            padding: 25px;
+            border-radius: 16px;
+        }
+
+        input,
+        input[type="text"]:focus {
+            width: 95vh;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            background-color: #C7D3BF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Holder">
+        <h1 id="Type">Hello</h1>
+        <input type="text" id="inputField" onkeydown="playSound()">
+        <p id="Time"></p>
+    </div>
+
+    <script>
+        var Texts = ["Hummus", "Cheese", "Coconut", "Green Peas", "4 Cylinder Twin Turbo V6"];
+        var ranInd = Math.floor(Math.random() * Texts.length);
+        var startTime;
+        var dateProv = new Date();
+
+        var length = 0;
+        var audios = ["Audio/click.mp3", "Audio/click2.mp3", "Audio/click3.mp3"]
+        var inputField = document.getElementById("inputField");
+        function playSound() {
+            var text = document.getElementById("Type");
+            if (inputField.value === text.textContent) {
+                console.log("Completed");
+                ChangeInd();
+                inputField.value = "";
+
+                var end = new Date().getTime() / 1000;
+                var elapTime = Math.round(end - startTime) + " seconds";
+
+                document.getElementById("Time").textContent = elapTime;
+            }
+
+            if (inputField.value == length) return;
+            length = inputField.value;
+
+            var key = new Audio();
+            key.src = audios[Math.floor(Math.random() * audios.length)];
+            key.play();
+        }
+
+        function ChangeInd() {
+            ranInd = Math.floor(Math.random() * Texts.length);
+            var text = document.getElementById("Type");
+            text.dataset.index = ranInd;
+            text.textContent = Texts[ranInd];
+            startTime = dateProv.getTime() / 1000;
+        }
+        ChangeInd();
+    </script>
+</body>
+
+</html>
