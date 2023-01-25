@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="gradient">
+        <div class="Holder">
+            <h1>Mouse Movement Based <br>Animated Radial Gradient</h1>
+        </div>
+    </div>
+</body>
+<style>
+    #gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .Holder {
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        align-items: center;
+        text-align: center;
+    }
+
+    h1 {
+        border-style: dashed;
+        padding: 25px;
+        border-radius: 16px;
+        border-color: white;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    const gradient = document.getElementById("gradient");
+    const colorArr = ["#FF4242", "#FFD042", "#87FF42", "#42C4FF", "#EE42FF"];
+    var currentColor1 = colorArr[0];
+    var currentColor2 = colorArr[1];
+    var currentColor3 = colorArr[colorArr.length - 1];
+    var ind1 = 0;
+    var ind2 = 1;
+    var ind3 = colorArr.length - 1;
+    let t = 0;
+
+    var x, y;
+    document.addEventListener("mousemove", function (event) {
+        gradient.style.background = `radial-gradient(circle at ${event.clientX / window.innerWidth * 100}% ${event.clientY / window.innerHeight * 100}%, ${currentColor1}, ${currentColor2})`;
+        x = event.clientX / window.innerWidth * 100;
+        y = event.clientY / window.innerHeight * 100;
+    });
+
+    setInterval(() => {
+        t += 0.01;
+        currentColor1 = interpolateColor(colorArr[ind1 % colorArr.length], colorArr[(ind1 + 1) % colorArr.length], t);
+        currentColor2 = interpolateColor(colorArr[ind2 % colorArr.length], colorArr[(ind2 + 1) % colorArr.length], t);
+        if (t >= 1) {
+            ind1++;
+            ind2++;
+            ind3--;
+            t = 0;
+        }
+
+        currentColor3 = interpolateColor(colorArr[ind3 % colorArr.length], colorArr[(ind3 - 1) % colorArr.length], t);
+
+        gradient.style.background = `radial-gradient(circle at ${x}% ${y}%, ${currentColor1}, ${currentColor2})`;
+
+        $('h1').css({
+            color: currentColor3
+        })
+    }, 50);
+
+    function interpolateColor(start, end, t) {
+        let startRgb = hexToRgb(start);
+        let endRgb = hexToRgb(end);
+        let newRgb = {
+            r: Math.round(startRgb.r + (endRgb.r - startRgb.r) * t),
+            g: Math.round(startRgb.g + (endRgb.g - startRgb.g) * t),
+            b: Math.round(startRgb.b + (endRgb.b - startRgb.b) * t)
+        };
+        return rgbToHex(newRgb);
+    }
+
+    function hexToRgb(hex) {
+        let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16)
+        } : null;
+    }
+
+    function componentToHex(c) {
+        let hex = c.toString(16);
+        return hex.length == 1 ? "0" + hex : hex;
+    }
+
+    function rgbToHex(rgb) {
+        return "#" + componentToHex(rgb.r) + componentToHex(rgb.g) + componentToHex(rgb.b);
+    }
+</script>
+
+</html>
