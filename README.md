@@ -21,3 +21,4 @@
 | <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%2017/info.md"> Day 17 (24-1-2023) Typing Speed Test 1</a>                              |
 | <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%2018/info.md"> Day 18 (25-1-2023) Animated Radial Gradient Based on Mouse Position</a> |
 | <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%2019/info.md"> Day 19 (26-1-2023) Add Day 18 gradient to Day 11 Gallery</a>            |
+| <a href="https://github.com/sohrabhamza/Days-of-code-JS/blob/main/Day%2020/info.md"> Day 20 (27-1-2023) Hacker Effect</a>                                    |
